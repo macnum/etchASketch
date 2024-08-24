@@ -1,0 +1,52 @@
+*::before,*,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    
+}
+div.main    {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6a46c4;
+    padding: 20px 0 ;
+}
+.container {
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box; 
+    width: 500.5px; /* Adjusted width */
+    height: 500px; 
+    background-color: #fff;
+    
+} 
+
+.grid-item {
+    border: 1px solid #f9f9f9;
+    box-sizing: border-box;
+}
+
+.pixelated {
+    background-color: #3e948d;
+}
+.start-btn {
+    background-color: #2e466b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+}
+.start-btn:active{
+    background-color: #b13434;
+}
