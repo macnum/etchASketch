@@ -24,9 +24,15 @@ function createGrid(number) {
     }
 }
 startBtn.addEventListener('click', () => {
+
     const numberOfBox = +prompt('Enter a number');
-    createGrid(numberOfBox);
-    createHoverEffect();
+    if(numberOfBox > 0 && numberOfBox <=100) {
+        createGrid(numberOfBox);
+        createHoverEffect();
+    }
+    else {
+        alert("Enter a positive number between 1 and 100");
+    }
 })
 
 function createHoverEffect() {
