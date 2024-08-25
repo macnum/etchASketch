@@ -6,15 +6,18 @@
 html {
     box-sizing: border-box;
 }
+body {
+    background-color: #000;
+}
 h1 {
     text-align: center;
-    
+    color: #fff;
 }
 div.main    {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #6a46c4;
+    background-color: #ffffff;
     padding: 20px 0 ;
 }
 .container {

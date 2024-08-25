@@ -31,7 +31,7 @@ startBtn.addEventListener('click', () => {
         createHoverEffect();
     }
     else {
-        alert("Enter a positive number between 1 and 100");
+        alert("Enter a positive number between 1 and 100")
     }
 })
 
