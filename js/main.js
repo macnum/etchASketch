@@ -1,8 +1,6 @@
 const gridContainer = document.querySelector('.grid-container');
-const startBtn = document.querySelector('.start-btn');
+const buttons = document.querySelectorAll('.btn')
 
-
-console.log(gridContainer);
 
 
 
@@ -23,26 +21,43 @@ function createGrid(number) {
         }
     }
 }
-startBtn.addEventListener('click', () => {
 
-    const numberOfBox = +prompt('Enter a number');
-    if(numberOfBox > 0 && numberOfBox <=100) {
-        createGrid(numberOfBox);
-        createHoverEffect();
-    }
-    else {
-        alert("Enter a positive number between 1 and 100")
-    }
+
+buttons.forEach((button)=> {
+    button.addEventListener('click', () => {
+        const numberOfBox = +prompt('Enter a number');
+        if(numberOfBox > 0 && numberOfBox <=100) {
+            createGrid(numberOfBox);
+            createHoverEffect(button);
+        }
+        else {
+            alert("Enter a positive number between 1 and 100")
+        }
+    });
 })
 
-function createHoverEffect() {
-    const items = document.querySelectorAll('.grid-item');
+function createHoverEffect(color) {
     
-    items.forEach((item) => {
-        item.addEventListener('mouseover', (e) => {
-        item.classList.add('pixelated');
-    } )
+    const cells = document.querySelectorAll('.grid-item');
+    cells.forEach((cell) => {
+        cell.addEventListener('mouseover', (e) => {
+            if(color.value === "black") {
+                getBlackColor(cell);
+            }
+            else if(color.value === 'random') {
+                getRandomColor(cell);
+                
+            }
+    });
 });
 
 }
-createPixel();
+function getBlackColor(box) {
+    box.classList.add('pixelated');
+}
+
+function getRandomColor(box) { 
+    const randomNumber = () =>  Math.floor(Math.random() * 256); 
+    box.style.backgroundColor = `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;  
+}
+
