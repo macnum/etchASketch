@@ -2,7 +2,7 @@ const gridContainer = document.querySelector('.grid-container');
 const buttons = document.querySelectorAll('.btn')
 
 
-
+/**create grid */
 
 function createGrid(number) {
     gridContainer.innerHTML = '';
