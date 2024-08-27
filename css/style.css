@@ -40,16 +40,39 @@ div.main    {
 }
 
 .pixelated {
-    background-color: #3e948d;
+    background-color: #000;;
 }
-.start-btn {
+.btn-container {
+    background-color: #181c41;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+.btn {
     background-color: #2e466b;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 10px;
     color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    
 }
-.start-btn:active{
+.random-btn:hover, .start-btn:hover{
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+}
+.random-btn:active,.start-btn:active{
     background-color: #b13434;
+}
+.btn:disabled {
+    background-color: #fff;
+    color: grey;
 }
