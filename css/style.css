@@ -7,11 +7,12 @@ html {
     box-sizing: border-box;
 }
 body {
-    background-color: #000;
+    background-color: #101010;
 }
 h1 {
     text-align: center;
     color: #fff;
+    margin: 20px;
 }
 div.main    {
     display: flex;
@@ -19,10 +20,14 @@ div.main    {
     align-items: center;
     background-color: #ffffff;
     padding: 20px 0 ;
+    max-width: 720px;
+    margin: auto;
+    border-radius: 10px;
+    
 }
 .container {
-    border: 1px solid #000;
-    border-radius: 3px;
+    border: 1px solid #989797;
+    border-radius: 2px;
 }
 .grid-container {
     display: flex;
@@ -37,9 +42,10 @@ div.main    {
 .grid-item {
     border: 1px solid #f9f9f9;
     box-sizing: border-box;
+    
 }
 
-.pixelated {
+.blackHover {
     background-color: #000;;
 }
 .btn-container {
@@ -64,7 +70,7 @@ div.main    {
     margin: 10px;
     
 }
-.random-btn:hover, .start-btn:hover{
+.btn:hover {
     background-color: #000;
     color: #fff;
     font-size: 14px;
